@@ -1,0 +1,54 @@
+body{
+  min-height: 100vh;
+  max-height: fit-content;
+  
+}
+*{
+  box-sizing: border-box;
+
+}
+
+.App{
+
+  display: grid;
+
+  background-color: aquamarine;
+  max-width: 90vw;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.input--div{
+  width: 90%;
+  background-color: red;
+  /* background-color: red; */
+  display: flex;
+  /* margin-bottom: 2rem; */
+  /* margin: auto; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* align-items: center; */
+  /* justify-content: end; */
+}
+.edit--form{
+  display: grid;
+  padding: 2rem;
+  border: 2px solid blue;
+  align-items: flex-start;
+  align-self: center;
+  width: 90%;
+  margin: auto;
+
+
+}
+.grid--5fr{
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  margin-bottom: 1rem;
+  row-gap: 1rem;
+}
+.EDIT--HEAD{
+  text-align: center;
+}
