@@ -1,10 +1,10 @@
 import React, {useContext, useState } from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams,useNavigate} from 'react-router-dom'
 import { getDatabase, ref, set } from "firebase/database";
 import { NewContext } from '../App';
 
 const Edit = ({data}) => {
-
+let navigate = useNavigate()
   const {newData,setNewData} = useContext(NewContext)
 const title = useParams()
 console.log({newData})
@@ -97,6 +97,7 @@ set(ref(db, 'users/' + id), {
        e.preventDefault()
        update()
        setNewData(!newData)
+       navigate("/")
   
 
    }

@@ -5,12 +5,14 @@ import { getDatabase, ref, set } from "firebase/database";
 import { useState,useContext } from "react";
 import toast, {Toaster} from "react-hot-toast"
 import { NewContext } from '../App';
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 const notify =()=> toast("you clicked me")
 
 export const Newdata = () => {
   const {newData,setNewData} = useContext(NewContext)
+  const navigate = useNavigate()
 
 
 
@@ -90,6 +92,7 @@ export const Newdata = () => {
     clearInput()
     notify()
     setNewData(!newData)
+    navigate("/")
   };
 
   return (
